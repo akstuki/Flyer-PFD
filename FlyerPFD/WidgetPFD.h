@@ -55,6 +55,7 @@
 #include <qfi_PFD.h>
 
 #include "LayoutSquare.h"
+#include <QHBoxLayout>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -151,7 +152,7 @@ private:
 
     Ui::WidgetPFD *m_ui;
     qfi_PFD       *m_pfd;
-    LayoutSquare  *m_layoutSq;
+    QHBoxLayout  *m_layoutSq;
 
     void setupUi();
 };

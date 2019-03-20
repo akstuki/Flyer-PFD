@@ -161,8 +161,8 @@ void qfi_PFD::resizeEvent( QResizeEvent * pEvent )
 
 void qfi_PFD::init()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleY = (float)width()  / (float)m_originalWidth;
+    m_scaleX = (float)height() / (float)m_originalHeight;
 
     m_adi->init( m_scaleX, m_scaleY );
     m_alt->init( m_scaleX, m_scaleY );
@@ -182,7 +182,7 @@ void qfi_PFD::init()
     m_itemMask->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
     m_scene->addItem( m_itemMask );
 
-    centerOn( width() / 2.0f , height() / 2.0f );
+    centerOn( height() / 2.0f , width() / 2.0f );
 
     updateView();
 }

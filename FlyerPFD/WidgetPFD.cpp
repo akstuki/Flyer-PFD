@@ -65,6 +65,7 @@ WidgetPFD::WidgetPFD( QWidget *parent ) :
     setupUi();
 
     m_pfd = m_ui->graphicsPFD;
+    m_pfd->rotate(90);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +81,7 @@ WidgetPFD::~WidgetPFD()
 
 void WidgetPFD::setupUi()
 {
-    m_layoutSq = new LayoutSquare( this );
+    m_layoutSq = new QHBoxLayout( this );
 
     m_layoutSq->setContentsMargins( 0, 0, 0, 0 );
     m_layoutSq->addWidget( m_ui->framePFD );
